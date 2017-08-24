@@ -11,7 +11,7 @@
         };
         changeItemsPerRow = () => {
             let itemsNum = document.getElementById('itemsPerRow').value;
-            ticTacToe.updateGameBoard(itemsNum);
+            ticTacToe.updateGameBoardSize(parseInt(itemsNum));
         }
     </script>
 </head>
@@ -21,10 +21,11 @@
         <div>
             <p>
                 <span>Change number of items in a row</span>
-                <input type="text" id="itemsPerRow">
-                <button type="button" onclick="changeItemsPerRow()">Update</button>
+                <input type="text" id="itemsPerRow" value="3">
+                <button type="button" onclick="changeItemsPerRow()">Reset game</button>
             </p>
             <div id="gameContainer"></div>
+            <p id="gameResult"></p>
         </div>
     </div>
 </body>
